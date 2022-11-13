@@ -8,7 +8,7 @@ export default function DisplayProducts(products) {
               <div id='card-product' class="card shadow rounded" style="width: 250px;">
                 <figure class="figure">
                     <img 
-                    class ="figure-img img-fluid rounded" 
+                    class ="img-product" 
                     loading='lazy' 
                     style="width: 100%" 
                     src=${ element.url_image || './images/products/' + element.id + '.jpg'}

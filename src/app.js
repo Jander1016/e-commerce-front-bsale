@@ -11,9 +11,6 @@ let detailProduct = document.querySelector('#app')
 let btnDelete = document.querySelector('.modal-list')
 let btnAllDelete = document.querySelector('#btn-all-delete')
 let btnBuy = document.querySelector('#btn-buy')
-let darkMode = document.querySelector('#dark-mode')
-
-darkMode.addEventListener('click', () => document.documentElement.classList.toggle('dark-mode'));
 
 btnAllDelete.addEventListener('click', deleteAllCart)
 

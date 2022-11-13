@@ -12,7 +12,7 @@ export default function addCart(e){
       let img = e.target.parentElement.parentElement.querySelector('.img-product').src
       let price = e.target.parentElement.querySelector(".price").textContent
       let amount = cartProducts.amount || 0
-  
+      
       const product={
         name,
         img,
@@ -63,13 +63,13 @@ export default function addCart(e){
 
       document.querySelector('.total-cart').innerHTML=totalCart;
 
+      localStorage.setItem('cart',JSON.stringify(cartProducts))
+      
       e.target.parentElement.parentElement.remove()
     }
   } catch (error) {
     console.log(error.message)
   }
-  
-  
 }
 
 export function deleteAllCart(e){
@@ -81,7 +81,7 @@ export function deleteAllCart(e){
       amountProduct = 0
       document.querySelector('.total-cart').innerHTML = totalCart;
       document.querySelector('#count-product').textContent= amountProduct
-
+      localStorage.clear()
   } catch (error) {
     console.log(error.message)
   }

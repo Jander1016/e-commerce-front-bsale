@@ -11,7 +11,7 @@ export async function findNameProduct(param) {
 
     if (productsList.data.length === 0) {
       const notFound = `<section class="col d-flex justify-content-center flex-row">
-              <img src='./images/NotFound.jpg' alt="notfound style="width: 100%; "" >
+              <img class="img-fluid" src='./images/NotFound.jpg' alt="notfound style="width: 100%; "" >
           </section>`
       document.getElementById('app').innerHTML = notFound
     } else {

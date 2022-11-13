@@ -17,7 +17,7 @@
     
 </head>
   <header id="nav">
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg bg-light gap-2">
         <img src="./images/favicon32x32.png" alt="BsaleTest">
         <a class="navbar-brand" href="#"><b>BSALE MarketPlace</b></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,7 +26,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           </ul>
-          <form class="d-flex" role="search">
+          <form class="d-flex gap-2" role="search">
             
             <select id="category-product" class="form-select form-select-sm" aria-label=".form-select-sm example"></select>
             <input id="name-product" class="form-control sm-2" type="search" placeholder="Nombre Producto" aria-label="Search" autocomplete="false">
@@ -42,26 +42,27 @@
             
           </form>
         </div>
-          <button class="switch" type="switch"  id="dark-mode" checked>
-          <label class="form-check-label" for="dark-mode"> <i class="fa-solid fa-sun"></i></label>
     </nav>
   </header>
   <body>
+    
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+      
       <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
+      <h2>Promociones</h2>
       <div class="carousel-inner">
           <div class="carousel-item active">
-              <img src='./images/products/cocacola.png' class="d-block w-100" alt="..." />
+              <img src='./images/products/cocacola.png' class="d-block w-100" alt="Promocion Coca Cola" />
           </div>
           <div class="carousel-item">
-              <img src='./images/products/ron.jpg' class="d-block w-100" alt="..." />
+              <img src='./images/products/ron.jpg' class="d-block w-100" alt="Promocion Ron" />
           </div>
           <div class="carousel-item">
-              <img src='./images/products/monster.jpeg' class="d-block w-100" alt="..." />
+              <img src='./images/products/monster.jpeg' class="d-block w-100" alt="Promocion Energizante Monster" />
           </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -117,11 +118,11 @@
           </div>
         </div>
       </section>
-      
+      <h2 class="text-center py-2 my-2">Productos</h2>
       <main id="app" class="row rows-sm-1 rows-md-2 rows-lg-3 rows-xl-4 my-3 py-1 "> </main>
 
-    <footer>
-        <p class="author">Create by <a href="https://github.com/Jander1016" target="_blank">Jander Gomez</a> for all</p>
+    <footer class="text-center">
+        <h5 class="author" class="display-4">Create by <a href="https://github.com/Jander1016" target="_blank">Jander Gomez</a> for all <img src="./images/heart.svg"></h5>
     </footer>
     <script src="./app.js" type="module" ></script>
 </body>
