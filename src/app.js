@@ -1,7 +1,7 @@
 //Importaciones
 import { LoadInitialproducts, LoadCategory } from './helpers/intialData.js';
 import { findCategoryProduct, findNameProduct } from './helpers/findProducts.js';
-import addCart, { deleteCart, deleteAllCart } from './components/cart/Cart.js';
+import addCart, { deleteCart, deleteAllCart, loadCartLocal } from './components/cart/Cart.js';
 
 // variables
 let nameProduct = document.querySelector('#name-product');
@@ -24,7 +24,10 @@ window.onload =   function () {
   Promise.allSettled([LoadCategory(), LoadInitialproducts()])
   .then(values=> values)
   .catch(error=> console.log(error.message))
+  
+  loadCartLocal()
 }
+
 
 findProduct.addEventListener('click', (e) => e.preventDefault());
 
