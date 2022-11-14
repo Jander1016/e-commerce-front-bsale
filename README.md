@@ -1,10 +1,10 @@
- <h1 align="center">🚀 Front End E-Commerce Bsale 🚀</h1>
+ <h1 align="center">🚀 E-Commerce Bsale 🚀</h1>
 
 <h2 align="center">📃 Información General 📃</h2>
 
-<p>Front End correspondiente a challenge de conocimiento por la empresa Bsale 🚀</p>
-<p>En este repositorio se encuentra la parte del Front-end de dicho proyecto.
-    El proyecto consiste en una tienda online, con las siguientes funciones</p>
+<p>Proyecto correspondiente a challenge de conocimiento por la empresa Bsale 🚀</p>
+
+<p>El proyecto consiste en una tienda online, con las siguientes funciones</p>
 <ul>
   <li>Filtrar los productos por Categorias.</li>
   <li>Hacer una busqueda consumiendo una API creada desde el Back-End.</li>
@@ -30,20 +30,19 @@
 </ul>
 
 <h2> 🚀 Deploy BSale MarketPlace 🚀 </h2>
-<p>La aplicación esta disponible en la web, con elsiguiente link</p>
+<p>La aplicación esta disponible en la web, con el siguiente link</p>
 
 Link Deploy https://endearing-jelly-6a15ac.netlify.app/
+
+<h2> Documentación Aplicación📃</h2>
+
+<p>Socumentación de la API del Back-End: https://e-commerce-back-bsale-production.up.railway.app/api/v1/docs/</p>
+
 
 <h2> Imagenes 💻</h2>
 
 <p align="left"> <img src="./src/images/project/home.png" alt="Home" /> </p>
 <p align="left"> <img src="./src/images/project/search.png" alt="Search" /> </p>
 <p align="left"> <img src="./src/images/project/cart.png" alt="Cart" /> </p>
-
-<h2> Documentación Aplicación📃</h2>
-
-<p>Para ver la documentación de la API</p>
-
-<p>https://e-commerce-back-bsale-production.up.railway.app/api/v1/docs/</p>
 
 

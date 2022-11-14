@@ -1,5 +1,11 @@
-
-export default function DisplayProducts(products) {
+/**
+ * @module CardProducts
+ */
+/**
+ * Función que permite crear las cards del producto para la página principal
+ * @param {Array} products Recibe un array que contiene el o los productos
+ */
+ function DisplayProducts(products) {
   try {
     document.getElementById('app').innerHTML = ""
     let productHTML = ''
@@ -36,3 +42,5 @@ export default function DisplayProducts(products) {
       </section>`
   }
 }
+
+export default DisplayProducts

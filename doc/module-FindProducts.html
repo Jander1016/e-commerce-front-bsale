@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>FindProducts - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h1><a href="index.html">Home</a></h1><h3>Modules</h3><ul><li><a href="module-CardProducts.html">CardProducts</a><ul class='methods'><li data-type='method'><a href="module-CardProducts.html#~DisplayProducts">DisplayProducts</a></li></ul></li><li><a href="module-FindProducts.html">FindProducts</a><ul class='methods'><li data-type='method'><a href="module-FindProducts.html#.findCategoryProduct">findCategoryProduct</a></li><li data-type='method'><a href="module-FindProducts.html#.findNameProduct">findNameProduct</a></li></ul></li><li><a href="module-InitialData.html">InitialData</a><ul class='methods'><li data-type='method'><a href="module-InitialData.html#.LoadCategory">LoadCategory</a></li><li data-type='method'><a href="module-InitialData.html#.LoadInitialproducts">LoadInitialproducts</a></li></ul></li><li><a href="module-MainApp.html">MainApp</a></li><li><a href="module-ShoppingCart.html">ShoppingCart</a><ul class='methods'><li data-type='method'><a href="module-ShoppingCart.html#.deleteAllCart">deleteAllCart</a></li><li data-type='method'><a href="module-ShoppingCart.html#.deleteCart">deleteCart</a></li><li data-type='method'><a href="module-ShoppingCart.html#.displayCart">displayCart</a></li><li data-type='method'><a href="module-ShoppingCart.html#.loadCartLocal">loadCartLocal</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#amountProduct">amountProduct</a></li><li><a href="global.html#cartProducts">cartProducts</a></li><li><a href="global.html#totalCart">totalCart</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">FindProducts</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helpers_findProducts.js.html">helpers/findProducts.js</a>, <a href="helpers_findProducts.js.html#line2">line 2</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+            
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="~categoryProductList"><span class="type-signature">(inner) </span>categoryProductList<span class="type-signature"> :String</span></h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helpers_findProducts.js.html">helpers/findProducts.js</a>, <a href="helpers_findProducts.js.html#line16">line 16</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Esta variable Recibe el nombre de la categoria del producto para realizar la busqueda según selección.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">String</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".findCategoryProduct"><span class="type-signature">(static) </span>findCategoryProduct<span class="signature">(nameCategory)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helpers_findProducts.js.html">helpers/findProducts.js</a>, <a href="helpers_findProducts.js.html#line52">line 52</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Función de busqueda que permite hacer una busqueda exacta de los productos de la categoria seleccionada.
+La busqueda se conecta con la API en el endpoint 'https://e-commerce-back-bsale-production.up.railway.app/api/v1/products/category/{category}'</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>nameCategory</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Recibe un dato tipo string, que corresponde a la categoria del prducto</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".findNameProduct"><span class="type-signature">(static) </span>findNameProduct<span class="signature">(nameProduct)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="helpers_findProducts.js.html">helpers/findProducts.js</a>, <a href="helpers_findProducts.js.html#line25">line 25</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Función de busqueda dinámica que permite hacer la busqueda de el o los productos, según el caracter ingresado en la caja de texto.
+La busqueda se conecta con la API en el endpoint 'https://e-commerce-back-bsale-production.up.railway.app/api/v1/products/{category}'</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>nameProduct</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Recibe un datos tipo string que puede contener caracteres que contenga el nombre del producto buscado.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.0</a> on Sun Nov 13 2022 23:50:12 GMT-0500 (hora estándar de Perú) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>
