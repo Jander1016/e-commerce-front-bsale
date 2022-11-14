@@ -35,8 +35,8 @@
 Link Deploy https://endearing-jelly-6a15ac.netlify.app/
 
 <h2> Documentación Aplicación📃</h2>
-
-<p>Socumentación de la API del Back-End: https://e-commerce-back-bsale-production.up.railway.app/api/v1/docs/</p>
+<p>Documentación de la Apliacación: https://beamish-fairy-8a464b.netlify.app/</p>
+<p>Documentación de la API del Back-End: https://e-commerce-back-bsale-production.up.railway.app/api/v1/docs/</p>
 
 
 <h2> Imagenes 💻</h2>
