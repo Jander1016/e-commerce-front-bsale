@@ -51,7 +51,7 @@ export async function findNameProduct(nameProduct) {
  */
 export async function findCategoryProduct(nameCategory) {
   try {
-    if (! param) return
+    if (!nameCategory) return
     const categoryProduct = await(await fetch(`https://e-commerce-back-bsale-production.up.railway.app/api/v1/products/category/${nameCategory}`)).json()
     if (categoryProduct.data.length === 0) {
       const allData= await(await fetch('https://e-commerce-back-bsale-production.up.railway.app/api/v1/products/')).json()
