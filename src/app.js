@@ -1,9 +1,8 @@
-//Importaciones
+
 import { LoadInitialproducts, LoadCategory } from './helpers/intialData.js';
 import { findCategoryProduct, findNameProduct } from './helpers/findProducts.js';
 import addCart, { deleteCart, deleteAllCart, loadCartLocal } from './components/cart/Cart.js';
 
-// variables
 let nameProduct = document.querySelector('#name-product');
 let findProduct = document.querySelector('#findName');
 let categoryProductList = document.querySelector('#category-product')
@@ -12,9 +11,6 @@ let btnDelete = document.querySelector('.modal-list')
 let btnAllDelete = document.querySelector('#btn-all-delete')
 let btnBuy = document.querySelector('#btn-buy')
 
-/**
-* @module MainApp
-*/
 /**
 * Función del botón Limpiar carrito que permite capturar el evento click y ejecutar la eliminación de todos los items del carrito de compras
 * @param {event} click Evento capturado
@@ -58,6 +54,10 @@ window.onload = function () {
 }
 
 /**
+* @module MainApp
+*/
+function eventsSearchFilters(){
+/**
 * Función del botón vuscar producto, que permite que no se recarga la página y pierdan datos.
 * @param {event} click Evento capturado
 * @param {Function} anónima Funcion para que no se recarga la página y pierdan datos.
@@ -91,3 +91,6 @@ categoryProductList.addEventListener('change', async (e) =>{
     console.log(error.message)
   }
 })
+}
+
+eventsSearchFilters()

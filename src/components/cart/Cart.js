@@ -56,7 +56,8 @@ export default function addCart(e) {
         totalCart += parseFloat(price)
         amountProduct++
         localStorage.setItem('cart', JSON.stringify(cartProducts))
-      } displayCart(cartProducts)
+      }
+      displayCart(cartProducts)
       document.querySelector('.total-cart').innerHTML = totalCart
       document.querySelector('#count-product').textContent = amountProduct
     }

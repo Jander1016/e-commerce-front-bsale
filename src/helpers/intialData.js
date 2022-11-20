@@ -8,6 +8,8 @@
  */
 import DisplayProducts from '../components/products/Products.js'
 
+const pathUrl = 'https://bsale-ecommerce.herokuapp.com/api/v1/'
+
 /**
  * Función que permite cargar las categorias en la lista, para poder realizar los filtros de productos.
  * La busqueda se conecta con la API en el endpoint 'https://e-commerce-back-bsale-production.up.railway.app/api/v1/categories'
@@ -15,13 +17,13 @@ import DisplayProducts from '../components/products/Products.js'
  */
 export async function LoadCategory() {
   try {
-    const categoryList = await(await fetch('https://e-commerce-back-bsale-production.up.railway.app/api/v1/categories')).json()
+    const categoryList = await(await fetch(pathUrl + 'categories')).json()
     if (categoryList.status !== 'OK') 
       return
     
-    let dataCategory = '<option selected>Seleccione categoria</option> '
+    let dataCategory = '<option value=0 selected>Seleccione categoria</option>'
     categoryList.data.map((category) => {
-      dataCategory += `<option value='${category.name}' >${category.name}</option>`
+      dataCategory += `<option value='${category.id}' >${category.name}</option>`
     })
     document.getElementById('category-product').innerHTML = dataCategory
   } catch (error) {
@@ -36,7 +38,7 @@ export async function LoadCategory() {
  */
 export async function LoadInitialproducts() {
   try {
-    const productsList = await(await fetch('https://e-commerce-back-bsale-production.up.railway.app/api/v1/products/')).json()
+    const productsList = await(await fetch(pathUrl + 'products/')).json()
     if (productsList.status !== 'OK') 
       return
     

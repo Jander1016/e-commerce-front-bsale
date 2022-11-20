@@ -15,6 +15,9 @@ import DisplayProducts from '../components/products/Products.js'
  */
 let categoryProductList = document.querySelector('#category-product')
 
+const pathUrl = 'https://e-commerce-back-bsale-production.up.railway.app/api/v1/'
+const pathUrlHeroku ='https://bsale-ecommerce.herokuapp.com/api/v1/'
+
 
 /**
  * Función de busqueda dinámica que permite hacer la busqueda de el o los productos, según el caracter ingresado en la caja de texto.
@@ -26,9 +29,14 @@ export async function findNameProduct(nameProduct) {
   try {
 
     categoryProductList.selectedIndex = 0
-    const productsList = await(await fetch('https://e-commerce-back-bsale-production.up.railway.app/api/v1/products/' + nameProduct)).json()
+    const productsList = await(await fetch(`${pathUrlHeroku}products/${nameProduct}`, {
+      'mode': 'cors',
+      'headers': {
+          'Access-Control-Allow-Origin': '*',
+      }
+    })).json()
 
-    if (productsList.data.length === 0) {
+    if (productsList.status !== 'OK') {
       const notFound = `<section class="col d-flex justify-content-center flex-row">
               <img class="img-fluid" src='./images/NotFound.jpg' alt="notfound style="width: 100%; "" >
           </section>`
@@ -46,15 +54,20 @@ export async function findNameProduct(nameProduct) {
 /**
  * Función de busqueda que permite hacer una busqueda exacta de los productos de la categoria seleccionada.
  * La busqueda se conecta con la API en el endpoint 'https://e-commerce-back-bsale-production.up.railway.app/api/v1/products/category/{category}'
- * @param {String} nameCategory Recibe un dato tipo string, que corresponde a la categoria del prducto
+ * @param {Integer} category Recibe un dato tipo string, que corresponde a la categoria del producto
  * 
  */
-export async function findCategoryProduct(nameCategory) {
+export async function findCategoryProduct(category) {
   try {
-    if (!nameCategory) return
-    const categoryProduct = await(await fetch(`https://e-commerce-back-bsale-production.up.railway.app/api/v1/products/category/${nameCategory}`)).json()
-    if (categoryProduct.data.length === 0) {
-      const allData= await(await fetch('https://e-commerce-back-bsale-production.up.railway.app/api/v1/products/')).json()
+    if (!category || category==='0') return findNameProduct(' ')
+    const categoryProduct = await(await fetch(`${pathUrlHeroku}products/category/${category}`, {
+      'mode': 'cors',
+      'headers': {
+          'Access-Control-Allow-Origin': '*',
+      }
+  })).json()
+    if (categoryProduct.status !== 'OK') {
+      const allData= await(await fetch(pathUrlHeroku + 'products')).json()
       DisplayProducts(allData.data)
     } else {
       DisplayProducts(categoryProduct.data)
