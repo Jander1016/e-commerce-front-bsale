@@ -29,7 +29,7 @@ export async function findNameProduct(nameProduct) {
   try {
 
     categoryProductList.selectedIndex = 0
-    const productsList = await(await fetch(`${pathUrlHeroku}products/${nameProduct}`, {
+    const productsList = await(await fetch(`${pathUrl}products/${nameProduct}`, {
       'mode': 'cors',
       'headers': {
           'Access-Control-Allow-Origin': '*',
@@ -60,14 +60,14 @@ export async function findNameProduct(nameProduct) {
 export async function findCategoryProduct(category) {
   try {
     if (!category || category==='0') return findNameProduct(' ')
-    const categoryProduct = await(await fetch(`${pathUrlHeroku}products/category/${category}`, {
+    const categoryProduct = await(await fetch(`${pathUrl}products/category/${category}`, {
       'mode': 'cors',
       'headers': {
           'Access-Control-Allow-Origin': '*',
       }
   })).json()
     if (categoryProduct.status !== 'OK') {
-      const allData= await(await fetch(pathUrlHeroku + 'products')).json()
+      const allData= await(await fetch(pathUrl + 'products')).json()
       DisplayProducts(allData.data)
     } else {
       DisplayProducts(categoryProduct.data)

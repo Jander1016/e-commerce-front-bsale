@@ -8,7 +8,8 @@
  */
 import DisplayProducts from '../components/products/Products.js'
 
-const pathUrl = 'https://bsale-ecommerce.herokuapp.com/api/v1/'
+// const pathUrl = 'https://bsale-ecommerce.herokuapp.com/api/v1/'
+const pathUrl= 'https://e-commerce-back-bsale-production.up.railway.app/api/v1/'
 
 /**
  * Función que permite cargar las categorias en la lista, para poder realizar los filtros de productos.
