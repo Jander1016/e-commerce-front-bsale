@@ -18,7 +18,12 @@ const pathUrl= 'https://e-commerce-back-bsale-production.up.railway.app/api/v1/'
  */
 export async function LoadCategory() {
   try {
-    const categoryList = await(await fetch(pathUrl + 'categories')).json()
+    const categoryList = await(await fetch(pathUrl + 'categories', {
+      'mode': 'cors',
+      'headers': {
+          'Access-Control-Allow-Origin': '*',
+      }
+  })).json()
     if (categoryList.status !== 'OK') 
       return
     
@@ -39,7 +44,12 @@ export async function LoadCategory() {
  */
 export async function LoadInitialproducts() {
   try {
-    const productsList = await(await fetch(pathUrl + 'products/')).json()
+    const productsList = await(await fetch(pathUrl + 'products/', {
+      'mode': 'cors',
+      'headers': {
+          'Access-Control-Allow-Origin': '*',
+      }
+  })).json()
     if (productsList.status !== 'OK') 
       return
     
